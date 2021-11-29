@@ -1,31 +1,31 @@
 import 'package:equatable/equatable.dart';
 import 'package:rick_and_morty_app/feature/domain/entities/person_entity.dart';
 
-abstract class PersonSearchState extends Equatable{
+abstract class PersonSearchState extends Equatable {
   const PersonSearchState();
 
   @override
-  List<Object?> get props => [];
+  List<Object> get props => [];
 }
 
-class PersonEmpty extends PersonSearchState{}
+class PersonSearchEmpty extends PersonSearchState {}
 
-class PersonSearchLoading extends PersonSearchState{}
+class PersonSearchLoading extends PersonSearchState {}
 
-class PersonSearchLoaded extends PersonSearchState{
+class PersonSearchLoaded extends PersonSearchState {
   final List<PersonEntity> persons;
 
-  PersonSearchLoaded(this.persons);
+  PersonSearchLoaded({required this.persons});
 
   @override
-  List<Object?> get props => [persons];
+  List<Object> get props => [persons];
 }
 
-class PersonSearchError extends PersonSearchState{
+class PersonSearchError extends PersonSearchState {
   final String message;
 
   PersonSearchError({required this.message});
 
   @override
-  List<Object?> get props => [message];
+  List<Object> get props => [message];
 }

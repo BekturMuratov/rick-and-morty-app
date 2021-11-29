@@ -1,4 +1,3 @@
-
 import 'package:meta/meta.dart';
 import 'package:rick_and_morty_app/feature/data/models/location_model.dart';
 import 'package:rick_and_morty_app/feature/domain/entities/person_entity.dart';
